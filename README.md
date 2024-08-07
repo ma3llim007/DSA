@@ -10,3 +10,5 @@
 > Learn Basic Maths.
 ## [04 Recursion](./04_recursion/)
 > When a Function Call Itself Untill a Specifical Condition Is Meet.
+## [05 Sorting](./05_sorting/)
+> A Sorting Algorithm is used to rearrange a given array or list of elements according to a comparison operator on the elements.
