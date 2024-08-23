@@ -1,4 +1,13 @@
 // 1. BRUTE FORCE APPROACH - SORTING ARRAY THEN CHECK THE TWO LARGEST VALUE AND RETURN SECOND LAST VALUE *** (N LOG N + N) ***
+const bruteForceApproach = (array) => {
+    if (array.length ===0 || array.length ===1) {
+        console.log(-1 +" "+ -1);
+        return
+    }
+    array.sort((a, b) => a - b);
+    let secondLarger = array[array.length - 2];
+    console.log(`Second Largest: ${secondLarger}`);
+}
 
 // 2. BETTER
 function betterApproach(array) {
@@ -34,8 +43,10 @@ function optimalApproach(array) {
 }
 
 function main() {
-    let array = [1, 2, 4, 7, 7, 5];
+    let array = [1, 2, 4, 6, 7, 5];
+    bruteForceApproach(array);
+
     const funcObj = optimalApproach(array)
-    console.log(`The Second Largest Number Is:- ${funcObj}`);
+    // console.log(`The Second Largest Number Is:- ${funcObj}`);
 }
 main()
