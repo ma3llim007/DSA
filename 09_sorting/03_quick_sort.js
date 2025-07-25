@@ -1,4 +1,8 @@
 const quickSort = (arr) => {
+    if (arr.length < 2) {
+        return arr;
+    }
+
     let pivot = arr[arr.length - 1];
     let left = [];
     let right = [];
@@ -15,8 +19,7 @@ const quickSort = (arr) => {
 };
 
 const arr = [8, 20, -2, 4, -6];
-quickSort(arr);
-console.log(arr);
+console.log(quickSort(arr));
 
 // Worst Case = O(n^2)
 // Avg Case = O(nlogn)
