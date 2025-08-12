@@ -9,11 +9,10 @@
 
 function threePattern(n) {
     for (let i = 1; i <= n; i++) {
-        let row = " ";
         for (let j = 1; j <= i; j++) {
-            row += j + ' ';
+            process.stdout.write(`${j} `);
         }
-        console.log(row);
+        console.log();
     }
 }
-threePattern(3)
+threePattern(5);

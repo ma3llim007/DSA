@@ -1,4 +1,3 @@
-
 /*
     04. Right Angled Number Pyramid II Pattern
     1
@@ -10,11 +9,11 @@
 
 function fourPattern(n) {
     for (let i = 1; i <= n; i++) {
-        let row = " ";
         for (let j = 1; j <= i; j++) {
-            row += i + ' ';
+            process.stdout.write(j + " ");
         }
-        console.log(row);
+        console.log();
+        
     }
 }
-fourPattern(5)
+fourPattern(5);
