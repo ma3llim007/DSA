@@ -2,7 +2,7 @@ const sortColorsBruteForce = (nums) => {
     return nums.sort((a, b) => a - b);
 };
 
-const sortColors = (nums) => {
+const sortColorsBetter = (nums) => {
     let count0 = 0,
         count1 = 0,
         count2 = 0;
@@ -19,7 +19,28 @@ const sortColors = (nums) => {
         else nums[i] = 2;
     }
 
-    return nums
+    return nums;
+};
+
+const sortColors = (nums) => {
+    let low = 0,
+        mid = 0,
+        high = nums.length - 1;
+
+    while (mid <= high) {
+        if (nums[mid] === 0) {
+            [nums[low], nums[mid]] = [nums[mid], nums[low]];
+            low++;
+            mid++;
+        } else if (nums[mid] === 1) {
+            mid++;
+        } else {
+            [nums[mid], nums[high]] = [nums[high], nums[mid]];
+            high--;
+        }
+    }
+
+    return nums;
 };
 
 console.log(sortColors([2, 0, 2, 1, 1, 0]));
