@@ -42,5 +42,22 @@ function isPalindrome(string) {
     }
 }
 
+const isPalindromeTwo = (s) => {
+    s = s.replaceAll(" ", "").toLowerCase();
+    let left = 0,
+        right = s.length - 1;
+
+    while (left < right) {
+        if (s[left] !== s[right]) {
+            return false;
+        }
+        right--;
+        left++;
+    }
+
+    return true;
+};
+
 const name = "A man a plan a canal Panama";
-palindromeWithTwoPointer(name);
+const name1 = "madam";
+console.log(isPalindromeTwo(name));
